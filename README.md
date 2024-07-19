@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿## Build Chat App with React, Socket.io, Nodejs, Redux-Toolkit, MongoDB (2024)
 
 ![Alt text](Full%20Stack%20Chat%20App.png?raw=true "Title")
@@ -23,3 +24,7 @@ Google Drive : https://drive.google.com/drive/folders/1mu6WFx63mlsbbwugdWgRGII_1
 
 
 
+=======
+# chatapplication
+A webapplication for users to have one and one chat with all the registered users
+>>>>>>> d941daced98b250c7deeea3a2fc609fc00058b73
