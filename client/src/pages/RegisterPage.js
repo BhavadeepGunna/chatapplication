@@ -28,8 +28,10 @@ const RegisterPage = () => {
 
   const handleUploadPhoto = async(e)=>{
     const file = e.target.files[0]
+    console.log(file)
 
     const uploadPhoto = await uploadFile(file)
+    console.log("file",uploadPhoto)
 
     setUploadPhoto(file)
 

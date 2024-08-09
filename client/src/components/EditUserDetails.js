@@ -55,18 +55,26 @@ const EditUserDetails = ({onClose,user}) => {
         }
         })
     }
+    //
+    //
 
     const handleSubmit = async(e)=>{
         e.preventDefault()
         e.stopPropagation()
         try {
             const URL = `${process.env.REACT_APP_BACKEND_URL}/api/update-user`
-
+            //console.log(data);
+            const token = localStorage.getItem('token')
+            const {name, profile_pic}=data;
+            const requestdata ={name,profile_pic};
             const response = await axios({
                 method : 'post',
                 url : URL,
-                data : data,
-                withCredentials : true
+                data : requestdata,
+                withCredentials : true,
+                headers: {
+                    Authorization: token // Add the token to the Authorization header
+                  }
             })
 
             console.log('response',response)
@@ -78,8 +86,9 @@ const EditUserDetails = ({onClose,user}) => {
             }
          
         } catch (error) {
+            console.log("user",user)
             console.log(error)
-            taost.error()
+            taost.error(error.message)
         }
     }
   return (
